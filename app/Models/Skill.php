@@ -9,6 +9,10 @@ class Skill extends Model
 {
     use HasFactory;
 
+    protected $fillable=[
+        'name',
+    ];
+
     public function heroes(){
         return $this->hasMany(Hero::class);
     }

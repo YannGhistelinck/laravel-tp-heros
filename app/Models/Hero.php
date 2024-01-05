@@ -9,6 +9,17 @@ class Hero extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'race',
+        'description',
+        'image',
+        'gender_id',
+        'skill_id',
+        'user_id'
+    ];
+
+
     public function user(){
         return $this->belongsTo(User::class);
     }
